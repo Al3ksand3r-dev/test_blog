@@ -11,5 +11,11 @@ router.get("/dashboard", auth, (req, res) =>
 router.get("/logout", (req, res) => {
   res.clearCookie("auth").redirect("/");
 });
+router.get("/create", auth, (req, res) =>
+  res.render("pages/create", { user: req.user })
+);
+router.get("/blogs", auth, (req, res) =>
+  res.render("pages/blogs", { user: req.user, blogs: [] })
+);
 
 module.exports = router;

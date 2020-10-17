@@ -1,0 +1,28 @@
+<%- include('../partials/header.ejs') %>
+<nav class="navbar">
+  <h1>
+    <a href="/dashboard">Dashboard | <%= user.name %></a>
+  </h1>
+  <ul>
+    <li><a href="/logout">Log out</a></li>
+  </ul>
+</nav>
+<div class="container">
+  <main class="content">
+    <form id="post-form">
+      <input
+        type="text"
+        name="title"
+        id="title"
+        placeholder="Choose a title for your blog"
+      />
+      <textarea
+        name="text"
+        id="text"
+        placeholder="Blog text goes here"
+      ></textarea>
+      <button>Create</button>
+    </form>
+  </main>
+</div>
+<%- include('../partials/footer.ejs') %>

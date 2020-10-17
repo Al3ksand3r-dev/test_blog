@@ -9,9 +9,13 @@
 </nav>
 <div class="container">
   <main class="content">
-    <h2>Let's get started!</h2>
-    <a href="/create">Create blog</a>
-    <a href="/blogs">All blogs</a>
+    <h2>All blogs</h2>
+    <hr />
+    <div class="display-blogs">
+      <% blogs.forEach(blog => { %>
+      <a href="#"><%= blog.title %></a>
+      <% }) %>
+    </div>
   </main>
 </div>
 <%- include('../partials/footer.ejs') %>

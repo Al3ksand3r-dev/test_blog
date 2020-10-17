@@ -1,6 +1,7 @@
 document.querySelectorAll("form").forEach((item) => {
   if (item.id === "login-form") item.addEventListener("submit", loginUser);
   if (item.id === "signup-form") item.addEventListener("submit", registerUser);
+  if (item.id === "post-form") item.addEventListener("submit", createForm);
 });
 
 function registerUser(e) {
@@ -59,4 +60,30 @@ function loginUser(e) {
     },
     body: JSON.stringify(input),
   }).then(() => (location.href = "/dashboard"));
+}
+
+function createForm(e) {
+  e.preventDefault();
+
+  let title = e.target.querySelector("#title").value;
+  let text = e.target.querySelector("#text").value;
+
+  const input = {
+    title,
+    text,
+  };
+  if (input.title == "" || input.text == "") {
+    console.log("Please fill in field(s)");
+    return;
+  }
+
+  fetch("/api/posts", {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(input),
+  })
+    .then((res) => res.json())
+    .then((data) => (location.href = "/blogs"));
 }

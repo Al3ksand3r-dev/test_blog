@@ -38,6 +38,7 @@ module.exports = {
     if (!passwordMatch) return;
     const token = jwt.sign(
       {
+        userID: user._id,
         name: user.name,
         role: user.role,
       },
