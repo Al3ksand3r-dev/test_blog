@@ -10,7 +10,7 @@ const {
 const { auth } = require("./verifyUser");
 
 router.get("/", auth, async (req, res) => {
-  const blogs = await getAll(req.user);
+  const blogs = await getAll(req.user, req.user.userID);
   if (blogs) {
     res.render("pages/posts", { user: req.user, blogs });
     return;

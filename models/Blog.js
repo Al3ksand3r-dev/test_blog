@@ -1,9 +1,9 @@
 const DataStore = require("nedb-promise");
 const blogs = new DataStore({ filename: "./db/blogs.db", autoload: true });
 module.exports = {
-  async getAll(user) {
+  async getAll(user, userID) {
     if (user.role == "user") {
-      return await blogs.find({ owner: user.userID });
+      return await blogs.find({ owner: userID });
     }
     return await blogs.find({});
   },
