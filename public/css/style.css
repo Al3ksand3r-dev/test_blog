@@ -46,6 +46,19 @@ body {
   text-align: center;
 }
 
+.content .blogs {
+  text-align: left;
+}
+
+hr {
+  margin: 0.5rem 0 2rem 0;
+}
+
+.blogs .blog-item > a {
+  display: block;
+  margin: 1rem 0;
+}
+
 form,
 input {
   gap: 1rem 0;
@@ -57,10 +70,6 @@ input {
 
 form > button {
   width: 100%;
-}
-
-.display-blogs {
-  text-align: left;
 }
 
 @media screen and (min-width: 1024px) {

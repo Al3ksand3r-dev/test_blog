@@ -16,4 +16,8 @@ module.exports = {
       content: newBlog.content,
     };
   },
+
+  async getOnePost(postID) {
+    return await blogs.findOne({ _id: postID });
+  },
 };

@@ -6,7 +6,7 @@ const port = 3000;
 const cookieParser = require("cookie-parser");
 const navRoutes = require("./routes/nav");
 const userRoutes = require("./routes/users");
-const blogRoutes = require("./routes/blogs");
+const blogRoutes = require("./routes/posts");
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "/public")));

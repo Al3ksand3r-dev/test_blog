@@ -85,5 +85,5 @@ function createForm(e) {
     body: JSON.stringify(input),
   })
     .then((res) => res.json())
-    .then((data) => (location.href = "/blogs"));
+    .then((data) => (location.href = "/api/posts"));
 }
