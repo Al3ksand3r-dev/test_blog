@@ -66,13 +66,13 @@ function createForm(e) {
   e.preventDefault();
 
   let title = e.target.querySelector("#title").value;
-  let text = e.target.querySelector("#text").value;
+  let content = e.target.querySelector("#content").value;
 
   const input = {
     title,
-    text,
+    content,
   };
-  if (input.title == "" || input.text == "") {
+  if (input.title == "" || input.content == "") {
     console.log("Please fill in field(s)");
     return;
   }

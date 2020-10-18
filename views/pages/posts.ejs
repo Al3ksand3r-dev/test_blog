@@ -12,17 +12,18 @@
     <article class="blogs">
       <% if(blogs.length > 0) { %>
       <h2>All blogs</h2>
+      <hr />
       <div class="blog-item">
         <% blogs.forEach((blog, index) => { %>
         <a href="/api/posts/<%= blog._id %>"
-          >#<%= index + 1 %> <%= blog.title %></a
-        >
+          >#<%= index + 1 %> <%= blog.title %>
+        </a>
         <% }) %>
       </div>
       <% } else { %>
       <h2>No blogs</h2>
-      <% } %>
       <hr />
+      <% } %>
     </article>
   </main>
 </div>
