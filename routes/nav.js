@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const { auth } = require("./verifyUser");
-const { getAll, getOnePost } = require("../models/Blog");
 
 router.get("/", (req, res) => res.render("pages/index"));
 router.get("/signup", (req, res) => res.render("pages/signup"));
