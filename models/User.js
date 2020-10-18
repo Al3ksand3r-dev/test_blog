@@ -19,7 +19,7 @@ module.exports = {
       name: body.name,
       email: body.email,
       password: await bcrypt.hash(body.password, 10),
-      role: "admin",
+      role: "user",
       posts: [],
     });
     return {
