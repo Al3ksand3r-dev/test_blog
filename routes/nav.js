@@ -14,7 +14,7 @@ router.get("/logout", (req, res) => {
 router.get("/create", auth, (req, res) =>
   res.render("pages/create", { user: req.user })
 );
-router.get("/blogs", auth, (req, res) =>
+router.get("/api/blogs", auth, (req, res) =>
   res.render("pages/blogs", { user: req.user, blogs: [] })
 );
 
